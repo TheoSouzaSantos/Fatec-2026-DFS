@@ -1,0 +1,36 @@
+﻿@model Fatec_2026_DFS.Models.Sensor
+
+@{
+    ViewData["Title"] = "Details";
+}
+
+<h1>Details</h1>
+
+<div>
+    <h4>Sensor</h4>
+    <hr />
+    <dl class="row">
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.Nome)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.Nome)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.SensorChama)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.SensorChama)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.SensorGas)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.SensorGas)
+        </dd>
+    </dl>
+</div>
+<div>
+    
+    <a asp-action="Index">Back to List</a>
+</div>

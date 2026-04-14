@@ -1,0 +1,47 @@
+﻿@model IEnumerable<Fatec_2026_DFS.Models.Sensor>
+
+@{
+    ViewData["Title"] = "Index";
+}
+
+<h1>Index</h1>
+
+<p>
+    <a asp-action="Create">Create New</a>
+</p>
+<table class="table">
+    <thead>
+        <tr>
+            <th>
+                @Html.DisplayNameFor(model => model.Nome)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.SensorChama)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.SensorGas)
+            </th>
+            <th></th>
+        </tr>
+    </thead>
+    <tbody>
+@foreach (var item in Model) {
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => item.Nome)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.SensorChama)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.SensorGas)
+            </td>
+            <td>
+                    @Html.ActionLink("Edit", "Edit", new { id = ((List<Sensor>)Model).IndexOf(item)  }) |
+                    @Html.ActionLink("Details", "Details", new { id = ((List<Sensor>)Model).IndexOf(item) }) |
+                @Html.ActionLink("Delete", "Delete", new {  id = ((List<Sensor>)Model).IndexOf(item)  })
+            </td>
+        </tr>
+}
+    </tbody>
+</table>
